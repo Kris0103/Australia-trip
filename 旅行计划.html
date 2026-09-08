@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>🌏 澳洲之旅 · 悉尼 & 墨尔本</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background: #f5f2f0;
+            padding: 20px 16px 40px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 22px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f0edeb;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+        .city-tag {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .date-badge {
+            background: #eae7e5;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #3d3a38;
+        }
+        .subhead {
+            font-size: 14px;
+            color: #7b7673;
+            margin-top: 2px;
+            border-left: 3px solid #d6b8a8;
+            padding-left: 12px;
+        }
+        .day-block {
+            margin-top: 18px;
+            border-top: 1px solid #eeeae8;
+            padding-top: 16px;
+        }
+        .day-title {
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .day-title span {
+            background: #f0edeb;
+            font-size: 12px;
+            font-weight: 400;
+            padding: 2px 10px;
+            border-radius: 30px;
+            color: #4f4a47;
+        }
+        .day-desc {
+            margin-top: 6px;
+            font-size: 14.5px;
+            line-height: 1.5;
+            color: #1f1c1a;
+            padding-left: 4px;
+        }
+        .day-desc li {
+            list-style: none;
+            margin-top: 4px;
+            display: flex;
+            gap: 6px;
+        }
+        .day-desc li::before {
+            content: "•";
+            color: #c09b8a;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+        .highlight {
+            background: #faf3ef;
+            border-radius: 16px;
+            padding: 14px 16px;
+            margin-top: 14px;
+            font-size: 14px;
+            border-left: 4px solid #c09b8a;
+        }
+        .flight-card {
+            background: #faf8f7;
+            border-radius: 20px;
+            padding: 16px;
+            margin-top: 12px;
+        }
+        .flight-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed #e6dfdb;
+        }
+        .flight-row:last-child {
+            border-bottom: 0;
+        }
+        .flight-price {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1e1b19;
+        }
+        .tag {
+            background: #d9d0ca;
+            color: #2d2825;
+            font-size: 11px;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        .checklist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+            margin-top: 12px;
+        }
+        .checklist-item {
+            background: #f3efec;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 13.5px;
+            color: #2b2724;
+        }
+        .footnote {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            color: #a39b96;
+            letter-spacing: 0.3px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e8e2de;
+            margin: 14px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 机票卡片 -->
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 600; font-size: 18px;">✈️ 往返机票</span>
+            <span class="tag">已出票</span>
+        </div>
+        <div class="flight-card">
+            <div class="flight-row">
+                <div>
+                    <div style="font-weight: 500;">香港 HKG → 悉尼 SYD</div>
+                    <div style="font-size: 13px; color: #5e5550;">12月24日 23:55 · CX101</div>
+                    <div style="font-size: 13px; color: #5e5550;">12月25日 12:00 抵达</div>
+                </div>
+                <div style="text-align: right; font-size: 14px; color: #3d3530;">含税</div>
+            </div>
+            <div class="flight-row">
+                <div>
+                    <div style="font-weight: 500;">墨尔本 MEL → 香港 HKG</div>
+                    <div style="font-size: 13px; color: #5e5550;">2027年1月2日 00:45 · CX178</div>
+                    <div style="font-size: 13px; color: #5e5550;">1月2日 抵达</div>
+                </div>
+                <div style="text-align: right; font-size: 14px; color: #3d3530;">含税</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 12px; padding-top: 10px; border-top: 1px solid #e2dad5;">
+                <span style="font-weight: 500;">总价</span>
+                <span class="flight-price">HK$17,658</span>
+            </div>
+        </div>
+        <div style="font-size: 13px; color: #7b6f69; margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap;">
+            <span>🏨 悉尼 3晚 (12.25-12.28)</span>
+            <span>🏨 墨尔本 4晚 (12.28-1.1)</span>
+        </div>
+    </div>
+
+    <!-- 悉尼 -->
+    <div class="card">
+        <div class="header">
+            <span class="city-tag">🦘 悉尼</span>
+            <span class="date-badge">12.25 – 12.28</span>
+        </div>
+        <div class="subhead">3晚 · 阳光与海港</div>
+
+        <div class="day-block">
+            <div class="day-title">📅 12.25 <span>落地日</span></div>
+            <ul class="day-desc">
+                <li>12:00 落地，入住</li>
+                <li>City walk 到入住时间</li>
+                <li>天文台看日落</li>
+                <li>海德公园</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title">📅 12.26 <span>观鲸</span></div>
+            <ul class="day-desc">
+                <li>F4 邮轮观鲸团</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title">📅 12.27 <span>自然</span></div>
+            <ul class="day-desc">
+                <li>蓝山公园一带</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title">📅 12.28 <span>机动日 · 晚上飞墨尔本</span></div>
+            <ul class="day-desc">
+                <li>歌剧院 / 邦迪海滩 / 悉尼大学 / 塔龙加动物园</li>
+                <li style="color: #8a7a72; margin-top: 6px;">✈️ 晚上航班飞墨尔本</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 墨尔本 -->
+    <div class="card">
+        <div class="header">
+            <span class="city-tag">🐧 墨尔本</span>
+            <span class="date-badge">12.28 – 1.1</span>
+        </div>
+        <div class="subhead">4晚 · 文艺与海岸</div>
+
+        <div class="day-block">
+            <div class="day-title">📅 12.28 <span>落地</span></div>
+            <ul class="day-desc">
+                <li>晚上落地墨尔本</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title">📅 12.29 <span>大洋路</span></div>
+            <ul class="day-desc">
+                <li>大洋路包车一日</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title">📅 12.30 <span>小火车 & 企鹅岛</span></div>
+            <ul class="day-desc">
+                <li>小火车 + 企鹅岛</li>
+                <li style="color:#9e7b6b; font-size:13px;">⚠️ 小火车需提前预定</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title">📅 12.31 <span>自由探索</span></div>
+            <ul class="day-desc">
+                <li>市区漫步 / 涂鸦街 / 维多利亚市场</li>
+            </ul>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title">📅 1.1 <span>机动日 · 凌晨飞</span></div>
+            <ul class="day-desc">
+                <li>白天机动 walk</li>
+                <li style="color:#8a7a72; margin-top:6px;">✈️ 凌晨航班返程</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 装备清单 + 备忘 -->
+    <div class="card">
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+            <span style="font-size: 20px;">🎒</span>
+            <span style="font-weight: 600; font-size: 17px;">出行备忘</span>
+        </div>
+        <div class="checklist">
+            <span class="checklist-item">🔌 转接头</span>
+            <span class="checklist-item">📱 流量卡</span>
+            <span class="checklist-item">🚃 交通卡</span>
+            <span class="checklist-item">☀️ 防晒</span>
+            <span class="checklist-item">🦟 防虫</span>
+            <span class="checklist-item">💵 现金</span>
+            <span class="checklist-item">📷 支架/三脚架</span>
+        </div>
+        <hr>
+        <div style="font-size: 14px; color: #3e3631; display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <span>📌 悉尼住宿: 12.25-12.28 (3晚)</span>
+            <span>📌 墨尔本住宿: 12.28-1.1 (4晚)</span>
+        </div>
+    </div>
+
+    <div class="footnote">
+        ✨ 祝旅途愉快 · 安全第一
+    </div>
+
+</body>
+</html>
